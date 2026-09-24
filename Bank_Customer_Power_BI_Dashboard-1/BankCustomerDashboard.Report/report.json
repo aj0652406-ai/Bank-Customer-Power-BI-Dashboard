@@ -1,0 +1,160 @@
+{
+  "id": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "name": "SharedResources",
+        "type": 2,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ]
+      }
+    },
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "name": "RegisteredResources",
+        "type": 1,
+        "items": [
+          {
+            "name": "BankTheme.json",
+            "path": "BankTheme.json",
+            "type": 0
+          }
+        ]
+      }
+    }
+  ],
+  "sections": [
+    {
+      "id": 0,
+      "name": "ReportSection1",
+      "displayName": "Customer Overview",
+      "filters": "[]",
+      "ordinal": 0,
+      "visualContainers": [
+        {
+          "x": 20,
+          "y": 14,
+          "z": 0,
+          "width": 900,
+          "height": 42,
+          "config": "{\"name\":\"5438931629964c20bb59\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20,\"y\":14,\"z\":0,\"width\":900,\"height\":42,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"ABC Bank Customer Overview Dashboard\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"24pt\",\"color\":\"#17365D\",\"fontFamily\":\"Segoe UI Semibold\"}}],\"horizontalTextAlignment\":\"left\"}]}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 20,
+          "y": 68,
+          "z": 0,
+          "width": 290,
+          "height": 95,
+          "config": "{\"name\":\"597759fc7bc245519b5c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20,\"y\":68,\"z\":0,\"width\":290,\"height\":95,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Total Customers\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bank\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Total Customers\"},\"Name\":\"Total Customers\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{},\"vcObjects\":{}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 330,
+          "y": 68,
+          "z": 0,
+          "width": 290,
+          "height": 95,
+          "config": "{\"name\":\"51da40a497dd41a0a2d8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":330,\"y\":68,\"z\":0,\"width\":290,\"height\":95,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Average Balance\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bank\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Average Balance\"},\"Name\":\"Average Balance\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{},\"vcObjects\":{}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 640,
+          "y": 68,
+          "z": 0,
+          "width": 290,
+          "height": 95,
+          "config": "{\"name\":\"195125ef24b14a57af61\",\"layouts\":[{\"id\":0,\"position\":{\"x\":640,\"y\":68,\"z\":0,\"width\":290,\"height\":95,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Churned Customers\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bank\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Churned Customers\"},\"Name\":\"Churned Customers\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{},\"vcObjects\":{}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 950,
+          "y": 68,
+          "z": 0,
+          "width": 290,
+          "height": 95,
+          "config": "{\"name\":\"6385f6ed424a433eb415\",\"layouts\":[{\"id\":0,\"position\":{\"x\":950,\"y\":68,\"z\":0,\"width\":290,\"height\":95,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Churn Rate\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bank\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Churn Rate\"},\"Name\":\"Churn Rate\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{},\"vcObjects\":{}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 20,
+          "y": 184,
+          "z": 0,
+          "width": 300,
+          "height": 245,
+          "config": "{\"name\":\"43ac8b62340849caa31b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20,\"y\":184,\"z\":0,\"width\":300,\"height\":245,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Bank.Churn\"}],\"Y\":[{\"queryRef\":\"Total Customers\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bank\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Churn\"},\"Name\":\"Bank.Churn\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Total Customers\"},\"Name\":\"Total Customers\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Customer Churn'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#17365D'\"}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'left'\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 340,
+          "y": 184,
+          "z": 0,
+          "width": 440,
+          "height": 245,
+          "config": "{\"name\":\"c95bb71a120048a9b897\",\"layouts\":[{\"id\":0,\"position\":{\"x\":340,\"y\":184,\"z\":0,\"width\":440,\"height\":245,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Bank.Age_Group\"}],\"Y\":[{\"queryRef\":\"Total Customers\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bank\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Age_Group\"},\"Name\":\"Bank.Age_Group\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Total Customers\"},\"Name\":\"Total Customers\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Customers by Age Group'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#17365D'\"}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'left'\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 800,
+          "y": 184,
+          "z": 0,
+          "width": 440,
+          "height": 245,
+          "config": "{\"name\":\"1876355bad954201be11\",\"layouts\":[{\"id\":0,\"position\":{\"x\":800,\"y\":184,\"z\":0,\"width\":440,\"height\":245,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Bank.Account_Type\"}],\"Y\":[{\"queryRef\":\"Average Balance\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bank\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Account_Type\"},\"Name\":\"Bank.Account_Type\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Average Balance\"},\"Name\":\"Average Balance\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Average Balance by Account Type'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#17365D'\"}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'left'\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 20,
+          "y": 449,
+          "z": 0,
+          "width": 550,
+          "height": 245,
+          "config": "{\"name\":\"60cb62788a964f2985ca\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20,\"y\":449,\"z\":0,\"width\":550,\"height\":245,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Bank.Income_Group\"}],\"Y\":[{\"queryRef\":\"Churn Rate\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bank\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Income_Group\"},\"Name\":\"Bank.Income_Group\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Churn Rate\"},\"Name\":\"Churn Rate\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Churn Rate by Income Group'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#17365D'\"}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'left'\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 590,
+          "y": 449,
+          "z": 0,
+          "width": 205,
+          "height": 245,
+          "config": "{\"name\":\"a21c8c1cec8049a3ad3e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":590,\"y\":449,\"z\":0,\"width\":205,\"height\":245,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Bank.Gender\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bank\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Gender\"},\"Name\":\"Bank.Gender\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Filter: Gender'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#17365D'\"}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'left'\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 815,
+          "y": 449,
+          "z": 0,
+          "width": 205,
+          "height": 245,
+          "config": "{\"name\":\"76e1df005ce84811b0ef\",\"layouts\":[{\"id\":0,\"position\":{\"x\":815,\"y\":449,\"z\":0,\"width\":205,\"height\":245,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Bank.Account_Type\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bank\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Account_Type\"},\"Name\":\"Bank.Account_Type\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Filter: Account Type'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#17365D'\"}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'left'\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 1040,
+          "y": 449,
+          "z": 0,
+          "width": 200,
+          "height": 245,
+          "config": "{\"name\":\"8896892b75a4496ba53b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1040,\"y\":449,\"z\":0,\"width\":200,\"height\":245,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Bank.City\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"Bank\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"City\"},\"Name\":\"Bank.City\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Filter: City'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#17365D'\"}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'left'\"}}}}}]}}}",
+          "filters": "[]"
+        }
+      ],
+      "config": "{}",
+      "displayOption": 1,
+      "width": 1280,
+      "height": 720
+    }
+  ],
+  "config": "{\"version\": \"5.55\", \"themeCollection\": {\"baseTheme\": {\"name\": \"CY24SU10\", \"version\": \"5.55\", \"type\": 2}, \"customTheme\": {\"name\": \"BankTheme.json\", \"version\": \"1.0\", \"type\": 1}}, \"activeSectionIndex\": 0, \"defaultDrillFilterOtherVisuals\": true, \"settings\": {\"useStylableVisualContainerHeader\": true, \"exportDataMode\": 1}}",
+  "layoutOptimization": 0,
+  "pods": [],
+  "publicCustomVisuals": []
+}

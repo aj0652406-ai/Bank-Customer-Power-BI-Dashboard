@@ -1,0 +1,4 @@
+Total Customers = DISTINCTCOUNT ( 'Bank'[Customer_ID] )
+Average Balance = AVERAGE ( 'Bank'[Balance] )
+Churned Customers = CALCULATE ( [Total Customers], 'Bank'[Churn] = "Yes" )
+Churn Rate = DIVIDE ( [Churned Customers], [Total Customers], 0 )
